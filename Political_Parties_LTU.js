@@ -34,7 +34,7 @@ db.Political_parties.find({$and: [{member_of_Parlament: 1}, {place_of_birth: {$n
 
 db.Political_parties.find({last_name: /as$/})
 
-4. Find all men, who are not from Vilnius or all woomen who are from Kaunas.
+4. Find all men, who are not from Vilnius or all women who are from Kaunas.
 
 db.Political_parties.find({ $or: [{$and: [{gender: 'male'}, {place_of_birth: {$ne: 'Vilnius'}]}, {$and: [{gender: 'female'}, {place_of_birth: 'Kaunas'}]}]})
 
